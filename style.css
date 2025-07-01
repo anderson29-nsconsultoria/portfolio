@@ -1,0 +1,33 @@
+body {
+    background-color: #000;
+    color: #33ff33;
+    font-family: 'Courier New', monospace;
+    padding: 20px;
+    margin: 0;
+}
+.terminal {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #0a0a0a;
+    padding: 20px;
+    border: 2px solid #33ff33;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #33ff33;
+    white-space: pre-wrap;
+}
+.logo-area {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.logo {
+    width: 100px;
+}
+.typing::after {
+    content: "|";
+    animation: blink 1s step-start infinite;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
