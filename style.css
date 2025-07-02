@@ -77,3 +77,14 @@ pre.typing::after {
         width: 120px;
     }
 }
+.link {
+    color: #00ff00;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.link:hover {
+    color: #39ff14;
+    text-shadow: 0 0 8px #39ff14;
+}
+
