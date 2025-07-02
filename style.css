@@ -37,3 +37,12 @@ body {
         opacity: 0;
     }
 }
+.logo {
+    width: 200px;
+    max-width: 80%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #33ff33;
+}
+
