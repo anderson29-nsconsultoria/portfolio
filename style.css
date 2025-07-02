@@ -26,6 +26,12 @@ body {
     content: "|";
     animation: blink 1s step-start infinite;
 }
+.logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
 @keyframes blink {
     50% {
         opacity: 0;
