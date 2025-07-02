@@ -17,8 +17,8 @@ Sou estudante em Cibersegurança, com foco em análise de vulnerabilidades, hard
 [+] Proxychains Suite — Roteamento seguro para varreduras
 
 > CONTATO
-Email: contato@nsconsultoria.tech
-GitHub: github.com/seunick
+Email: anderson.souza@nsconsultoria.tech
+GitHub: github.com/anderson29-nsconsultoria
 `;
 
 let i = 0;
