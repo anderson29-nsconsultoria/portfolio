@@ -1,33 +1,35 @@
 body {
     background-color: #000;
-    color: #33ff33;
-    font-family: 'Courier New', monospace;
-    padding: 20px;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
 .terminal {
-    max-width: 900px;
-    margin: 40px auto;
-    background: #0a0a0a;
+    background-color: #111;
     padding: 20px;
-    border: 2px solid #33ff33;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #33ff33;
-    white-space: pre-wrap;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ff00;
+    max-width: 800px;
+    width: 100%;
 }
+
 .logo-area {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
 }
+
 .logo {
-    width: 100px;
-}
-.typing::after {
-    content: "|";
-    animation: blink 1s step-start infinite;
-}
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
+    max-width: 200px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ff00;
 }
