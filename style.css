@@ -1,3 +1,4 @@
+
 body {
     background-color: #000;
     color: #33ff33;
@@ -5,6 +6,7 @@ body {
     padding: 20px;
     margin: 0;
 }
+
 .terminal {
     max-width: 900px;
     margin: 40px auto;
@@ -15,28 +17,12 @@ body {
     box-shadow: 0 0 20px #33ff33;
     white-space: pre-wrap;
 }
+
 .logo-area {
     text-align: center;
     margin-bottom: 20px;
 }
-.logo {
-    width: 100px;
-}
-.typing::after {
-    content: "|";
-    animation: blink 1s step-start infinite;
-}
-.logo {
-    width: 150px;
-    display: block;
-    margin: 0 auto 20px auto;
-}
 
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
 .logo {
     width: 200px;
     max-width: 80%;
@@ -46,3 +32,13 @@ body {
     box-shadow: 0 0 15px #33ff33;
 }
 
+.typing::after {
+    content: "|";
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
