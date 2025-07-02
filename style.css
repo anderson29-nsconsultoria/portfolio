@@ -1,92 +1,85 @@
 body {
-    background-color: #000;
-    color: #0f0;
-    font-family: 'Courier New', Courier, monospace;
-    margin: 0;
-    padding: 0;
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
 }
-
-.terminal-box {
-    max-width: 900px;
-    margin: 40px auto;
-    border: 2px solid #0f0;
-    box-shadow: 0 0 20px #0f0;
-    padding: 20px;
-    background-color: #111;
-    border-radius: 10px;
-    animation: fadeIn 2s ease-in-out;
+.terminal-container {
+  border: 2px solid #0f0;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 900px;
+  background-color: #111;
+  box-shadow: 0 0 25px #0f0;
+  border-radius: 10px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
 .logo {
-    width: 160px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #0f0;
+  display: block;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #0f0;
 }
-
+.terminal {
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.4;
+}
 .link {
-    color: #0f0;
-    text-decoration: none;
-    transition: text-shadow 0.3s ease;
+  color: #00ff00;
+  text-decoration: none;
+  word-break: break-word;
 }
 .link:hover {
-    text-shadow: 0 0 8px #0f0;
+  color: #00cc00;
+  text-decoration: underline;
 }
-
-.download-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 18px;
-    border: 1px solid #0f0;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #0f0;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-.download-btn:hover {
-    background-color: #0f0;
-    color: #000;
-    text-shadow: none;
-}
-
-.green {
-    color: #00ff00;
-}
-
-.highlight {
-    color: #aaffaa;
-    font-weight: bold;
-}
-
 .bar {
-    width: 100%;
-    background-color: #222;
-    border: 1px solid #0f0;
-    height: 18px;
-    margin: 2px 0 10px 0;
-    border-radius: 4px;
+  display: inline-block;
+  width: 100%;
+  background-color: #003300;
+  border-radius: 4px;
+  margin: 2px 0;
 }
-
-.bar div {
-    height: 100%;
-    background-color: #0f0;
-    text-align: right;
-    padding-right: 5px;
-    line-height: 18px;
-    color: #000;
-    font-weight: bold;
-    border-radius: 4px;
-    box-shadow: 0 0 8px #0f0;
+.level {
+  display: inline-block;
+  background-color: #00ff00;
+  color: #000;
+  font-weight: bold;
+  padding: 0 8px;
+  border-radius: 4px;
+  margin-left: 8px;
 }
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+.btn {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: #000;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: monospace;
+}
+.btn:hover {
+  background-color: #00ff00;
+  color: #000;
+}
+@media (max-width: 600px) {
+  .terminal-container {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+  .logo {
+    max-width: 140px;
+  }
+  .terminal {
+    font-size: 12px;
+  }
 }
