@@ -1,66 +1,92 @@
 body {
     background-color: #000;
-    color: #00ff00;
-    font-family: "Courier New", Courier, monospace;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
 }
 
-.terminal {
-    background-color: #111;
-    border: 2px solid #00ff00;
-    box-shadow: 0 0 20px #00ff00;
+.terminal-box {
     max-width: 900px;
     margin: 40px auto;
-    padding: 40px;
+    border: 2px solid #0f0;
+    box-shadow: 0 0 20px #0f0;
+    padding: 20px;
+    background-color: #111;
     border-radius: 10px;
-    overflow-x: auto;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.logo-area {
+.logo-container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
 .logo {
-    max-width: 200px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px #00ff00;
+    width: 160px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0f0;
 }
 
-.typing::after {
-    content: "_";
-    animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
-a.link {
-    color: #00ff00;
+.link {
+    color: #0f0;
     text-decoration: none;
+    transition: text-shadow 0.3s ease;
+}
+.link:hover {
+    text-shadow: 0 0 8px #0f0;
 }
 
-a.link:hover {
-    text-shadow: 0 0 5px #00ff00;
-    color: #66ff66;
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: 1px solid #0f0;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #0f0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.download-btn:hover {
+    background-color: #0f0;
+    color: #000;
+    text-shadow: none;
 }
 
-@media screen and (max-width: 600px) {
-    .terminal {
-        margin: 20px;
-        padding: 20px 10px;
-    }
+.green {
+    color: #00ff00;
+}
 
-    .logo {
-        max-width: 120px;
-    }
+.highlight {
+    color: #aaffaa;
+    font-weight: bold;
+}
 
-    pre.typing {
-        font-size: 12px;
-    }
+.bar {
+    width: 100%;
+    background-color: #222;
+    border: 1px solid #0f0;
+    height: 18px;
+    margin: 2px 0 10px 0;
+    border-radius: 4px;
+}
+
+.bar div {
+    height: 100%;
+    background-color: #0f0;
+    text-align: right;
+    padding-right: 5px;
+    line-height: 18px;
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 0 8px #0f0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
