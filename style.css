@@ -1,47 +1,65 @@
 body {
-    background-color: black;
+    background-color: #000;
     color: #00ff00;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     margin: 0;
     padding: 0;
 }
 
 .terminal {
-    max-width: 960px;
-    margin: 40px auto;
     background-color: #111;
-    padding: 40px 20px;
-    border-radius: 12px;
+    border: 2px solid #00ff00;
     box-shadow: 0 0 20px #00ff00;
-    overflow: auto;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 10px;
 }
 
 .logo-area {
-    text-align: center;
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .logo {
     max-width: 200px;
-    height: auto;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 0 20px #00ff00;
 }
 
-/* Efeito de digitação opcional */
-.typing {
-    white-space: pre-wrap;
-    word-wrap: break-word;
+.typing::after {
+    content: "_";
+    animation: blink 1s step-start infinite;
 }
 
-/* Links com hover verde neon */
-.link {
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+a.link {
     color: #00ff00;
     text-decoration: none;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.link:hover {
-    color: #39ff14;
-    text-shadow: 0 0 8px #39ff14;
+a.link:hover {
+    text-shadow: 0 0 5px #00ff00;
+    color: #66ff66;
+}
+
+@media screen and (max-width: 600px) {
+    .terminal {
+        margin: 20px;
+        padding: 20px 10px;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+
+    pre.typing {
+        font-size: 12px;
+    }
 }
