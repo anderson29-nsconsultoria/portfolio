@@ -1,62 +1,71 @@
-/* Reset básico */
+/* Reset geral */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da página */
+/* Fundo da página */
 body {
     background-color: black;
     color: #00ff00;
-    font-family: 'Courier New', monospace;
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     min-height: 100vh;
-    padding: 40px 10px;
+    padding: 1rem;
 }
 
-/* Terminal principal */
+/* Terminal central */
 .terminal {
     background-color: #111;
+    padding: 2rem;
     border: 2px solid #00ff00;
-    box-shadow: 0 0 20px #00ff00;
-    padding: 20px;
+    box-shadow: 0 0 15px #00ff00;
+    max-width: 900px;
     width: 100%;
-    max-width: 960px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
 }
 
-/* Logo centralizado */
+/* Logo com centralização e efeito */
 .logo-area {
-    text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
 }
 
 .logo {
-    max-width: 160px;
-    width: 100%;
+    width: 150px;
     height: auto;
-    border-radius: 6px;
-    box-shadow: 0 0 10px #00ff00;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ff00;
 }
 
-/* Texto com estilo terminal */
-pre.typing {
-    white-space: pre-wrap;
-    word-break: break-word;
+/* Texto com simulação de terminal */
+pre.typing::after {
+    content: '_';
+    animation: blink 0.8s step-start infinite;
+    color: #00ff00;
 }
 
-/* Evita que o texto vaze em telas pequenas */
+/* Animação de cursor */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Responsividade para dispositivos menores */
 @media (max-width: 600px) {
     .terminal {
-        padding: 15px;
+        padding: 1rem;
+        font-size: 0.9rem;
     }
 
     .logo {
-        max-width: 120px;
+        width: 120px;
     }
 }
