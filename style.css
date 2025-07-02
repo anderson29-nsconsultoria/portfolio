@@ -1,11 +1,11 @@
-/* Reset geral */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fundo da página */
+/* Fundo e centralização */
 body {
     background-color: black;
     color: #00ff00;
@@ -17,20 +17,20 @@ body {
     padding: 1rem;
 }
 
-/* Terminal central */
+/* Estilo do terminal */
 .terminal {
     background-color: #111;
     padding: 2rem;
     border: 2px solid #00ff00;
     box-shadow: 0 0 15px #00ff00;
-    max-width: 900px;
+    max-width: 960px;
     width: 100%;
     border-radius: 10px;
     text-align: left;
-    position: relative;
+    overflow-x: auto;
 }
 
-/* Logo com centralização e efeito */
+/* Área da logo centralizada */
 .logo-area {
     display: flex;
     justify-content: center;
@@ -44,21 +44,29 @@ body {
     box-shadow: 0 0 15px #00ff00;
 }
 
-/* Texto com simulação de terminal */
+/* Texto formatado como terminal */
+pre.typing {
+    overflow-x: auto;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+/* Cursor piscando */
 pre.typing::after {
     content: '_';
     animation: blink 0.8s step-start infinite;
     color: #00ff00;
 }
 
-/* Animação de cursor */
 @keyframes blink {
     50% {
         opacity: 0;
     }
 }
 
-/* Responsividade para dispositivos menores */
+/* Responsividade */
 @media (max-width: 600px) {
     .terminal {
         padding: 1rem;
