@@ -1,7 +1,7 @@
 root@nsconsultoria.tech:~# PORTFÓLIO PROFISSIONAL
 
 > SOBRE MIM
-Sou especialista em Cibersegurança, com foco em análise de vulnerabilidades, hardening de sistemas, automação e hacking ético.
+Sou estudante em Cibersegurança, com foco em análise de vulnerabilidades, hardening de sistemas, automação e hacking ético.
 
 > FERRAMENTAS DOMINADAS
 - Nmap, Nikto, WhatWeb, Dirb, Gobuster
