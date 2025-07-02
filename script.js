@@ -18,7 +18,8 @@ Sou estudante em Cibersegurança, com foco em análise de vulnerabilidades, hard
 
 > CONTATO
 Email: anderson.souza@nsconsultoria.tech
-GitHub: github.com/anderson29-nsconsultoria
+GitHub: <a href="https://github.com/anderson29-nsconsultoria" target="_blank" class="link">github.com/anderson29-nsconsultoria</a>  
+LinkedIn: <a href="https://www.linkedin.com/in/anderson-souza-bb1a87172" target="_blank" class="link">linkedin.com/in/anderson-souza</a>
 `;
 
 let i = 0;
