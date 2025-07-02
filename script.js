@@ -1,3 +1,6 @@
+const output = document.getElementById("output");
+
+const text = `
 root@nsconsultoria.tech:~# PORTFÓLIO PROFISSIONAL
 
 > SOBRE MIM
@@ -9,13 +12,22 @@ Sou estudante em Cibersegurança, com foco em análise de vulnerabilidades, hard
 - Kali Linux, Burp Suite, Metasploit
 
 > PROJETOS EM DESTAQUE
-[+] vulnscanner – Scanner Web com análise integrada
-[+] monitor_vulnerabilidades – Painel de segurança em tempo real
-[+] Proxychains Suite – Roteamento seguro para varreduras
+[+] vulnscanner — Scanner Web com análise integrada
+[+] monitor_vulnerabilidades — Painel de segurança em tempo real
+[+] Proxychains Suite — Roteamento seguro para varreduras
 
 > CONTATO
-Email: anderson.souza@nsconsultoria.tech  
-LinkedIn: https://www.linkedin.com/in/anderson-souza-bb1a87172  
-GitHub: https://github.com/anderson29-nsconsultoria
-        </pre>
-    </div>
+Email: contato@nsconsultoria.tech
+GitHub: github.com/seunick
+`;
+
+let i = 0;
+
+function typeText() {
+    if (i < text.length) {
+        output.textContent += text[i];
+        i++;
+        setTimeout(typeText, 20);
+    }
+}
+typeText();
