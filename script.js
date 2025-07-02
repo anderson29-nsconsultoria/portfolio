@@ -4,7 +4,7 @@ const text = `
 root@nsconsultoria.tech:~# PORTFÓLIO PROFISSIONAL
 
 > SOBRE MIM
-Sou especialista em Cibersegurança, com foco em análise de vulnerabilidades, hardening de sistemas, automação e hacking ético.
+Sou estudante  em Cibersegurança, com foco em análise de vulnerabilidades, hardening de sistemas, automação e hacking ético.
 
 > FERRAMENTAS DOMINADAS
 - Nmap, Nikto, WhatWeb, Dirb, Gobuster
@@ -17,8 +17,8 @@ Sou especialista em Cibersegurança, com foco em análise de vulnerabilidades, h
 [+] Proxychains Suite — Roteamento seguro para varreduras
 
 > CONTATO
-Email: contato@nsconsultoria.tech
-GitHub: github.com/seunick
+Email: anderson.souza@nsconsultoria.tech
+GitHub: github.com/anderson29-nsconsultoria
 `;
 
 let i = 0;
