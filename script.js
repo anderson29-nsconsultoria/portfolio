@@ -1,32 +1,28 @@
-const text = `
-root@nsconsultoria.tech:~# PORTFÓLIO PROFISSIONAL
 
-> SOBRE MIM
-Sou estudante em Cibersegurança, com foco em análise de vulnerabilidades, hardening de sistemas, automação e hacking ético.
+document.getElementById('modeSwitch').addEventListener('change', function () {
+  if (this.checked) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+});
 
-> FERRAMENTAS DOMINADAS
-- Nmap, Nikto, WhatWeb, Dirb, Gobuster
-- Fail2Ban, ClamAV, Proxychains
-- Kali Linux, Burp Suite, Metasploit
+window.addEventListener('DOMContentLoaded', () => {
+  const fills = document.querySelectorAll('.fill');
+  fills.forEach(el => {
+    const width = el.getAttribute('data-width') || '70%';
+    setTimeout(() => {
+      el.style.width = width;
+    }, 300);
+  });
+});
 
-> PROJETOS EM DESTAQUE
-[+] vulnscanner — Scanner Web com análise integrada
-[+] monitor_vulnerabilidades — Painel de segurança em tempo real
-[+] Proxychains Suite — Roteamento seguro para varreduras
 
-> CONTATO
-Email: anderson.souza@nsconsultoria.tech
-GitHub: https://github.com/anderson29-nsconsultoria
-LinkedIn: https://www.linkedin.com/in/anderson-souza-bb1a87172
-`;
-
-let i = 0;
-const speed = 15;
-function typeWriter() {
-    if (i < text.length) {
-        document.getElementById("output").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
-}
-window.onload = typeWriter;
+document.getElementById('langToggle').addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('lang') || 'pt';
+  const next = current === 'pt' ? 'en' : 'pt';
+  document.documentElement.setAttribute('lang', next);
+  document.querySelectorAll('[data-pt]').forEach(el => {
+    el.textContent = el.getAttribute(`data-${next}`);
+  });
+});
