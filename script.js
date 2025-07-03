@@ -26,3 +26,23 @@ document.getElementById('langToggle').addEventListener('click', () => {
     el.textContent = el.getAttribute(`data-${next}`);
   });
 });
+
+
+document.getElementById('langToggle').addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('lang') || 'pt';
+  const next = current === 'pt' ? 'en' : 'pt';
+  document.documentElement.setAttribute('lang', next);
+  document.querySelectorAll('[data-pt]').forEach(el => {
+    el.textContent = el.getAttribute(`data-${next}`);
+  });
+});
+const langToggle = document.getElementById('langToggle');
+let currentLang = 'pt';
+
+langToggle.addEventListener('click', () => {
+  currentLang = (currentLang === 'pt') ? 'en' : 'pt';
+  document.querySelectorAll('[data-pt]').forEach(el => {
+    el.textContent = el.getAttribute(`data-${currentLang}`);
+  });
+});
+
