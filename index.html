@@ -1,39 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio Profissional - NS Consultoria</title>
+  <title>Portfólio Hacker - Anderson Souza</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="terminal-container">
-    <img src="anderson.png" alt="Logo" class="logo" />
-    <pre class="terminal">
-root@nsconsultoria.tech:~# PORTFÓLIO PROFISSIONAL
+  <nav class="sidebar">
+    <h2>⚡ Anderson</h2>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#ferramentas">Ferramentas</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#certificacoes">Certificações</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="lang-switch"><button id="langToggle">PT/EN</button></div>
+    <div class="toggle">
+      <label for="modeSwitch">🌙</label>
+      <input type="checkbox" id="modeSwitch" />
+    </div>
+  </nav>
 
-> SOBRE MIM
-Sou estudante em Cibersegurança, com foco em análise de vulnerabilidades, hardening de sistemas, automação e hacking ético.
+  <main class="content">
+    <section class="hero">
+      <img src="assets/anderson.png" alt="Anderson" class="profile" />
+      <h1>root@nsconsultoria.tech:~# <span data-pt="PORTFÓLIO PROFISSIONAL" data-en="PROFESSIONAL PORTFOLIO">PORTFÓLIO PROFISSIONAL</span></h1>
+    </section>
 
-> FERRAMENTAS DOMINADAS
-- Nmap                        <span class="bar"><span class="level">Intermediário</span></span>
-- Nikto                      <span class="bar"><span class="level">Intermediário</span></span>
-- WhatWeb                    <span class="bar"><span class="level">Intermediário</span></span>
-- Dirb, Gobuster             <span class="bar"><span class="level">Intermediário</span></span>
-- Fail2Ban, ClamAV, Proxychains <span class="bar"><span class="level">Intermediário</span></span>
-- Kali Linux, Burp Suite, Metasploit <span class="bar"><span class="level">Intermediário</span></span>
+    <section id="sobre" class="section fade-in">
+      <h2 data-pt="Sobre Mim" data-en="About Me">Sobre Mim</h2>
+      <p>Sou estudante em Cibersegurança, com foco em análise de vulnerabilidades, hardening de sistemas, automação e hacking ético.</p>
+    </section>
 
-> PROJETOS EM DESTAQUE
-[+] vulnscanner — Scanner Web com análise integrada
-[+] monitor_vulnerabilidades — Painel de segurança em tempo real
-[+] Proxychains Suite — Roteamento seguro para varreduras
+    <section id="ferramentas" class="section fade-in">
+      <h2 data-pt="Ferramentas Dominadas" data-en="Mastered Tools">Ferramentas Dominadas</h2>
+      <div class="skill"><span>Nmap</span><div class="bar"><div class="fill" data-width="90%"></div></div></div>
+      <div class="skill"><span>Nikto</span><div class="bar"><div class="fill" data-width="85%"></div></div></div>
+      <div class="skill"><span>WhatWeb</span><div class="bar"><div class="fill" data-width="80%"></div></div></div>
+      <div class="skill"><span>Dirb, Gobuster</span><div class="bar"><div class="fill" data-width="85%"></div></div></div>
+      <div class="skill"><span>Fail2Ban, ClamAV, Proxychains</span><div class="bar"><div class="fill" data-width="75%"></div></div></div>
+      <div class="skill"><span>Kali Linux, Burp Suite, Metasploit</span><div class="bar"><div class="fill" data-width="90%"></div></div></div>
+    </section>
 
-> CONTATO
-Email: anderson.souza@nsconsultoria.tech
-GitHub: <a class="link" href="https://github.com/anderson29-nsconsultoria" target="_blank">https://github.com/anderson29-nsconsultoria</a>
-LinkedIn: <a class="link" href="https://www.linkedin.com/in/anderson-souza-bb1a87172" target="_blank">https://www.linkedin.com/in/anderson-souza-bb1a87172</a>
-    </pre>
-    <a href="curriculo_anderson.pdf" class="btn" download> Download Currículo</a>
-  </div>
+    <section id="projetos" class="section fade-in">
+      <h2 data-pt="Projetos em Destaque" data-en="Featured Projects">Projetos em Destaque</h2>
+      <ul>
+        <li><strong>vulnscanner</strong> – Scanner Web com análise integrada</li>
+        <li><strong>monitor_vulnerabilidades</strong> – Painel de segurança em tempo real</li>
+        <li><strong>Proxychains Suite</strong> – Roteamento seguro para varreduras</li>
+      </ul>
+    </section>
+
+    <section id="certificacoes" class="section fade-in">
+  <h2 data-pt="Certificações" data-en="Certifications">Certificações</h2>
+  <ul class="cert-list">
+    <li><a href="https://cursos.alura.com.br/certificate/andersouza0408/certificacao-linux-lpi-essentials-command-line-basics" target="_blank">Linux Essentials: Command Line Basics</a></li>
+    <li><a href="https://cursos.alura.com.br/certificate/andersouza0408/certificacao-linux-lpi-essentials-evolution-distributions" target="_blank">Linux Essentials: Evolution and Distributions</a></li>
+    <li><a href="https://cursos.alura.com.br/certificate/andersouza0408/certificacao-linux-lpi-essentials-open-source-software-licensing" target="_blank">Linux Essentials: Open Source and Licensing</a></li>
+    <li><a href="https://cursos.alura.com.br/certificate/andersouza0408/certificacao-linux-lpi-essentials-redirecting-i-o" target="_blank">Linux Essentials: Redirecting I/O</a></li>
+    <li><a href="https://cursos.alura.com.br/certificate/andersouza0408/certificacao-linux-lpi-essentials-using-command-line-get-help" target="_blank">Linux Essentials: Using Command Line Help</a></li>
+    <li><a href="assets/certificate.pdf" target="_blank">Zabbix Certified - August 15, 2024</a></li>
+  </ul>
+</section>
+
+    <section id="contato" class="section fade-in">
+      <h2 data-pt="Contato" data-en="Contact">Contato</h2>
+      <p>Email: anderson.souza@nsconsultoria.tech</p>
+      <p>GitHub: <a href="https://github.com/anderson29-nsconsultoria" target="_blank">github.com/anderson29-nsconsultoria</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/anderson-souza-bb1a87172" target="_blank">linkedin.com/in/anderson-souza</a></p>
+      <a href="assets/curriculum.pdf" download class="download-button">⬇ Download Currículo</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
