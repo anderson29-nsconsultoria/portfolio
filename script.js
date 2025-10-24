@@ -1,48 +1,57 @@
+(function(){
+      const root = document.documentElement;
+      const btn  = document.getElementById('themeToggle');
 
-document.getElementById('modeSwitch').addEventListener('change', function () {
-  if (this.checked) {
-    document.documentElement.setAttribute('data-theme', 'light');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  }
-});
+      // tema inicial
+      const saved = localStorage.getItem('theme');
+      const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      const start = saved || (prefersLight ? 'light' : 'dark');
+      root.setAttribute('data-theme', start);
+      btn.textContent = start === 'light' ? '🌞' : '🌙';
 
-window.addEventListener('DOMContentLoaded', () => {
-  const fills = document.querySelectorAll('.fill');
-  fills.forEach(el => {
-    const width = el.getAttribute('data-width') || '70%';
-    setTimeout(() => {
-      el.style.width = width;
-    }, 300);
-  });
-});
+      // alternar tema
+      btn.addEventListener('click', () => {
+        const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        btn.textContent = next === 'light' ? '🌞' : '🌙';
+      });
 
+      // animações suaves com IntersectionObserver
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReduced && 'IntersectionObserver' in window){
+        const obs = new IntersectionObserver((entries)=>{
+          entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
+        }, {threshold: 0.14});
+        document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+      } else {
+        document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'));
+      }
 
-document.getElementById('langToggle').addEventListener('click', () => {
-  const current = document.documentElement.getAttribute('lang') || 'pt';
-  const next = current === 'pt' ? 'en' : 'pt';
-  document.documentElement.setAttribute('lang', next);
-  document.querySelectorAll('[data-pt]').forEach(el => {
-    el.textContent = el.getAttribute(`data-${next}`);
-  });
-});
+      // ano no rodapé
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-
-document.getElementById('langToggle').addEventListener('click', () => {
-  const current = document.documentElement.getAttribute('lang') || 'pt';
-  const next = current === 'pt' ? 'en' : 'pt';
-  document.documentElement.setAttribute('lang', next);
-  document.querySelectorAll('[data-pt]').forEach(el => {
-    el.textContent = el.getAttribute(`data-${next}`);
-  });
-});
-const langToggle = document.getElementById('langToggle');
-let currentLang = 'pt';
-
-langToggle.addEventListener('click', () => {
-  currentLang = (currentLang === 'pt') ? 'en' : 'pt';
-  document.querySelectorAll('[data-pt]').forEach(el => {
-    el.textContent = el.getAttribute(`data-${currentLang}`);
-  });
-});
-
+      // envio do formulário (Formspree)
+      const form = document.getElementById('contactForm');
+      if(form){
+        form.addEventListener('submit', async (e)=>{
+          e.preventDefault();
+          const status = document.getElementById('formStatus');
+          status.textContent = 'Enviando...'; status.className = 'status';
+          try{
+            const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers: { 'Accept':'application/json' }});
+            if(res.ok){
+              form.reset();
+              status.textContent = 'Mensagem enviada com sucesso!';
+              status.className = 'status ok';
+            } else {
+              status.textContent = 'Não foi possível enviar. Tente novamente.';
+              status.className = 'status err';
+            }
+          }catch(err){
+            status.textContent = 'Erro de rede. Verifique sua conexão.';
+            status.className = 'status err';
+          }
+        });
+      }
+    })();
