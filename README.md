@@ -46,7 +46,8 @@ Copiar código
 
 ## 📸 Prévia
 
-*(adicione aqui uma imagem ou GIF mostrando o portfólio em funcionamento)*
+<img width="1348" height="687" alt="image" src="https://github.com/user-attachments/assets/a9fffd98-2ad2-482b-b990-d15f48c01a87" />
+
 
 ---
 
