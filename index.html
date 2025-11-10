@@ -5,7 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Anderson Souza · Portfólio</title>
   <meta name="description" content="Portfólio de Anderson Souza — Suporte Técnico, Infraestrutura e Segurança da Informação." />
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Anderson Souza · Portfólio" />
+  <meta property="og:description" content="Suporte Técnico, Infraestrutura e Segurança da Informação." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nsconsultoria.cloud/" />
+  <meta property="og:image" content="https://nsconsultoria.cloud/foto.jpeg" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Anderson Souza · Portfólio" />
+  <meta name="twitter:description" content="Suporte Técnico, Infraestrutura e Segurança da Informação." />
+  <meta name="twitter:image" content="https://nsconsultoria.cloud/foto.jpeg" />
+
+  <link rel="canonical" href="https://nsconsultoria.cloud/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0b0e13" />
+
+  <!-- Ícones -->
+  <link rel="icon" href="foto.jpeg">
+  <link rel="apple-touch-icon" href="foto.jpeg">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- CSS -->
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <!-- Imagem LCP -->
+  <link rel="preload" as="image" href="foto.jpeg" fetchpriority="high">
+
+  <!-- JSON-LD: WebSite + Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Anderson Souza · Portfólio",
+        "url": "https://nsconsultoria.cloud/",
+        "inLanguage": "pt-BR",
+        "description": "Portfólio de Anderson Souza — Suporte Técnico, Infraestrutura e Segurança da Informação."
+      },
+      {
+        "@type": "Person",
+        "name": "Anderson Souza",
+        "jobTitle": "Analista de Suporte N2",
+        "knowsAbout": ["Infraestrutura de TI", "Segurança da Informação", "Virtualização", "Monitoramento"],
+        "address": { "@type": "PostalAddress", "addressLocality": "São José dos Campos", "addressRegion": "SP", "addressCountry": "BR" },
+        "url": "https://nsconsultoria.cloud/",
+        "sameAs": [
+          "https://www.linkedin.com/in/andersouza-ti/",
+          "https://github.com/anderson29-nsconsultoria"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -13,16 +68,16 @@
   <!-- HEADER -->
   <header class="site">
     <div class="container">
-      <nav class="nav">
+      <nav class="nav" aria-label="Navegação principal">
         <a class="brand" href="#topo" aria-label="Página inicial">
-          <span class="logo" aria-hidden>AS</span>
-          <h1 class="brand-title">Anderson Souza · Suporte & Infra</h1>
+          <span class="logo" aria-hidden="true">AS</span>
+          <span class="brand-title">Anderson Souza · Suporte & Infra</span>
         </a>
-        <div class="navlinks" role="navigation">
+        <div class="navlinks">
           <a href="#sobre">Sobre</a>
           <a href="#experiencia">Experiência</a>
           <a href="#skills">Competências</a>
-          <!--<a href="#projetos">Projetos</a>-->
+          <a href="#projetos">Projetos</a>
           <a href="#certificados">Certificações</a>
           <a href="#contato">Contato</a>
         </div>
@@ -35,22 +90,30 @@
   <section id="topo" class="container hero reveal">
     <div class="card p24">
       <p class="subtitle">São José dos Campos/SP</p>
-      <h2 class="title">Analista de Suporte N2 · Segurança da Informação</h2>
-      <p class="muted">Profissional de TI com 10+ anos em suporte técnico, infraestrutura e segurança. Especialista em administração de servidores Linux/Windows, virtualização e monitoramento de redes. Perfil colaborativo, analítico e orientado à excelência e melhoria contínua.</p>
+      <h1 class="title">Analista de Suporte N2 · Segurança da Informação</h1>
+      <p class="muted">
+        Profissional de TI com 10+ anos em suporte técnico, infraestrutura e segurança. Especialista em administração de servidores Linux/Windows, virtualização e monitoramento de redes. Perfil colaborativo, analítico e orientado à excelência e melhoria contínua.
+      </p>
       <div class="badges" aria-label="stack">
         <span class="badge">Linux · Windows</span>
-        <span class="badge">VMware · Proxmox · Hyper‑V</span>
+        <span class="badge">VMware · Proxmox · Hyper-V</span>
         <span class="badge">OpenStack · Zabbix · Grafana</span>
         <span class="badge">Firewall · VPN · AD · DNS</span>
         <span class="badge">Veeam · cPanel · Plesk</span>
       </div>
       <div class="cta">
         <a class="btn primary" href="#contato">Fale comigo</a>
-        <a class="btn" href="Curriculo.pdf" download>Baixar CV (PDF)</a>
+        <a class="btn" href="assets/Curriculo.pdf" download>Baixar CV (PDF)</a>
       </div>
     </div>
     <figure class="avatar card p12">
-      <img src="foto.jpeg" alt="Foto de Anderson Souza" loading="lazy" />
+      <img
+        src="foto.jpeg"
+        alt="Foto de Anderson Souza"
+        decoding="async"
+        fetchpriority="high"
+        width="320" height="320"
+      />
     </figure>
   </section>
 
@@ -86,7 +149,7 @@
         <div class="tl-item">
           <h3>Analista de Suporte N2 · EVEO S.A.</h3>
           <div class="tl-meta">Ago/2023 – Ago/2025 · São Paulo (remoto/presencial)</div>
-          <p class="muted">Administração de servidores Linux/Windows; firewalls (pfSense, iptables, CSF); VPNs IPsec/SSL; OpenStack; virtualização (Proxmox, VMware, Hyper‑V); cPanel/Plesk; e‑mail (Zimbra, SmarterMail); AD, DNS; Grafana; resposta a incidentes.</p>
+          <p class="muted">Administração de servidores Linux/Windows; firewalls (pfSense, iptables, CSF); VPNs IPsec/SSL; OpenStack; virtualização (Proxmox, VMware, Hyper-V); cPanel/Plesk; e-mail (Zimbra, SmarterMail); AD, DNS; Grafana; resposta a incidentes.</p>
         </div>
         <div class="tl-item">
           <h3>Analista de Suporte Field Pleno · Ativy Cloud</h3>
@@ -124,7 +187,7 @@
           <div class="hd"><strong>Cloud & Virtualização</strong></div>
           <div class="bd chips">
             <span class="chip">OpenStack</span>
-            <span class="chip">VMware · Proxmox · Hyper‑V</span>
+            <span class="chip">VMware · Proxmox · Hyper-V</span>
             <span class="chip">cPanel · Plesk</span>
             <span class="chip">Zimbra · SmarterMail</span>
           </div>
@@ -132,27 +195,46 @@
       </div>
     </section>
 
-    <!-- PROJETOS 
+    <!-- PROJETOS (dinâmico) -->
     <section id="projetos" class="container section reveal">
-      <h2>Projetos</h2>
-      <div class="cards">
-        <div class="card-sm">
-          <strong>Hardening & Monitoramento — Zabbix + Grafana</strong>
-          <p class="muted">Dashboards de disponibilidade, latência e capacidade; alertas por severidade e playbooks.</p>
-          <div class="chips"><span class="chip">Zabbix</span><span class="chip">Grafana</span><span class="chip">Linux</span><span class="chip">SNMP</span></div>
-        </div>
-        <div class="card-sm">
-          <strong>Migração para Proxmox — Alta Disponibilidade</strong>
-          <p class="muted">Consolidação de VMs e política de backups com Veeam. Redução de custos e RPO < 15min.</p>
-          <div class="chips"><span class="chip">Proxmox</span><span class="chip">VMware</span><span class="chip">Veeam</span><span class="chip">Ceph/NFS</span></div>
-        </div>
-        <div class="card-sm">
-          <strong>Segurança de Perímetro — VPN + Firewall</strong>
-          <p class="muted">Políticas de firewall padronizadas e VPN IPsec/SSL para filiais e acesso remoto seguro.</p>
-          <div class="chips"><span class="chip">pfSense</span><span class="chip">iptables/CSF</span><span class="chip">IPsec/SSL</span><span class="chip">AD/DNS</span></div>
-        </div>
+      <div class="projects__head">
+        <h2>Projetos</h2>
+        <form class="projects__filters" role="search" aria-label="Filtrar projetos">
+          <input id="projSearch" type="search" placeholder="Buscar por nome ou tecnologia…" aria-label="Buscar projetos">
+          <select id="projTech" aria-label="Filtrar por tecnologia">
+            <option value="">Todas as tecnologias</option>
+            <option>Flask</option>
+            <option>Nmap</option>
+            <option>Nikto</option>
+            <option>WhatWeb</option>
+            <option>Dirb</option>
+            <option>Gobuster</option>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>Formspree</option>
+          </select>
+        </form>
       </div>
-    </section>-->
+
+      <div id="projectsGrid" class="projects" role="list" aria-live="polite"></div>
+
+      <template id="projectCardTpl">
+        <article class="project-card" role="listitem" tabindex="0">
+          <figure class="project-card__media">
+            <img alt="" width="560" height="315" loading="lazy" decoding="async">
+          </figure>
+          <div class="project-card__body">
+            <h3 class="project-card__title"></h3>
+            <p class="project-card__desc"></p>
+            <ul class="project-card__chips" aria-label="Tecnologias"></ul>
+            <div class="project-card__cta">
+              <a class="btn" target="_blank" rel="noopener noreferrer">Ver demo</a>
+            </div>
+          </div>
+        </article>
+      </template>
+    </section>
 
     <!-- CERTIFICAÇÕES -->
     <section id="certificados" class="container section reveal">
@@ -173,35 +255,34 @@
           <div class="bd">
             <p class="muted">Aberto a oportunidades e conexões profissionais.</p>
             <ul class="list">
-              <li><strong>E‑mail:</strong> <a href="mailto:anderson.souza@nsconsultoria.cloud">anderson.souza@nsconsultoria.cloud</a></li>
-              <li><strong>Telefone:</strong> <a href="tel:+5511919308229">(11) 91930‑8229</a></li>
+              <li><strong>E-mail:</strong> <a href="mailto:anderson.souza@nsconsultoria.cloud">anderson.souza@nsconsultoria.cloud</a></li>
+              <li><strong>Telefone:</strong> <a href="tel:+5511919308229">(11) 91930-8229</a></li>
               <li><strong>Cidade:</strong> São José dos Campos/SP</li>
             </ul>
             <div class="cta">
-              <a class="btn" href="https://www.linkedin.com/in/andersouza-ti/" aria-disabled="true">LinkedIn</a>
-              <a class="btn" href="https://github.com/anderson29-nsconsultoria" aria-disabled="true">GitHub</a>
+              <a class="btn" href="https://www.linkedin.com/in/andersouza-ti/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="btn" href="https://github.com/anderson29-nsconsultoria" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
         </article>
         <article class="item">
           <div class="hd"><strong>Envie uma mensagem</strong></div>
           <div class="bd">
-            <!-- Substitua SEU_ID abaixo pelo ID do seu formulário Formspree -->
             <form id="contactForm" action="https://formspree.io/f/xyznrjno" method="POST" novalidate>
               <div class="field">
                 <label for="nome">Nome</label>
-                <input id="nome" name="nome" type="text" required placeholder="Seu nome" />
+                <input id="nome" name="nome" type="text" required placeholder="Seu nome" autocomplete="name" />
               </div>
               <div class="field">
-                <label for="email">E‑mail</label>
-                <input id="email" name="email" type="email" required placeholder="seu@email.com" />
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" required placeholder="seu@email.com" autocomplete="email" inputmode="email" />
               </div>
               <div class="field">
                 <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Como posso ajudar?"></textarea>
+                <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Como posso ajudar?" autocomplete="off"></textarea>
               </div>
 
-              <!-- honeypot (anti‑spam) -->
+              <!-- honeypot (anti-spam) -->
               <input type="text" name="_gotcha" class="hp" autocomplete="off" tabindex="-1" aria-hidden="true">
 
               <div class="cta">
@@ -219,15 +300,14 @@
     <div class="container foot">
       <small class="muted">© <span id="year"></span> Anderson Souza. Todos os direitos reservados.</small>
       <div class="social">
-        <a href="https://www.linkedin.com/in/andersouza-ti/">LinkedIn</a>
-        <a href="https://github.com/anderson29-nsconsultoria">GitHub</a>
-        <a href="assts/Curriculo.pdf" download>CV</a>
+        <a href="https://www.linkedin.com/in/andersouza-ti/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/anderson29-nsconsultoria" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="assets/Curriculo.pdf" download>CV</a>
       </div>
     </div>
   </footer>
 
-  <!-- JS enxuto: tema e animações -->
-  <script src="script.js"></script>
+  <!-- JS -->
+  <script src="script.js" defer></script>
 </body>
 </html>
-
