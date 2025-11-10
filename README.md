@@ -53,7 +53,7 @@ Copiar código
 
 ## 📫 Contato
 
-📧 **E-mail:** anderson@nsconsultoria.cloud  
+📧 **E-mail:** anderson.souza@nsconsultoria.cloud  
 💻 **GitHub:** [github.com/anderson-souza-tech](https://github.com/anderson-souza-tech)  
 🔗 **LinkedIn:** [linkedin.com/in/anderson-souza-tech](https://linkedin.com/in/anderson-souza-tech)
 
